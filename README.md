@@ -1,7 +1,7 @@
 <h1>Preshak | File Sharing WebApp</h1>
 <p>Hey there <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px"><br/><br/>Preshak is a file sharing web application :computer:, the application helps to send files in real-time to receiver gmail account :rocket:</p> You can visit <a href="https://preshak.herokuapp.com/">Preshak here</a><br/><br/>
 <p align="center">
-<img src="https://github.com/SanjeevYadavcr7/Preshak-FileSharing/blob/main/UI.png" width="800px" height="500px" align="center" style="border:1px solid" alt="Godam"></p>
+<img src="https://github.com/SanjeevYadavcr7/Preshak-FileSharing/blob/main/UI.png" width="700px" height="430px" align="center" style="border:1px solid" alt="Godam"></p>
 <h3>Project Features</h3>
 File Upload | Email Specification | Send files to gmail | Automatic notifications | Responsiveness
 
