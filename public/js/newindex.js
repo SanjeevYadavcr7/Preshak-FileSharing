@@ -1,5 +1,5 @@
 const maxAllowedSize = 100* 1024 * 1024;  // 100MB 
-const host = "https://preshak.herokuapp.com/";
+const host = "https://preshak-filesharingapp.herokuapp.com/";
 const uploadURL = `${host}api/files`;
 const emailURL = `${host}api/files/send`;
 
