@@ -163,7 +163,7 @@ emailForm.addEventListener("submit", (e) => {
             // dropDiv.style.display = "block";
             // fileInput.value = "";
             setTimeout(() => {
-            window.location.href = 'http://localhost:5000';
+            window.location.href = 'https://preshak-filesharingapp.herokuapp.com/';
             },2700);
             showToast("Email Sent!");
          }
