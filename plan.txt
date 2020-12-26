@@ -1,0 +1,45 @@
+Steps to complete File Sharing App
+-------------------------------------------------------------------
+
+1. Initialize project with yarn(yarn init -y)
+
+2. Install express and nodemon
+
+3. Add scripts in server.js
+
+4. Install mongoDB  
+
+5. Configure Database in >config>db.js
+
+6. Install DotEnv for using .env (to use .env file use "require('dotenv').config()")
+
+7. Setup mongoDB atlas and connect the db using connection string
+
+8. Connect DB to server.js
+
+9. Setup Multer(middleware which helps to handle "multipart/form-data")
+    - When user uploads files as form data then encoding type is "multipart/form-data"
+
+10. Setup dataStore using multer to store files
+
+11. Create model to store file related information
+
+12. Create upload() to upload file info to db
+
+13. Create download route(in download.js)
+
+14. Create Email send feature
+    - create a post '/send' request for sending Email
+    - create a new emailService in (services/emailService.js) for sending emailService
+    - configure emailService using SendinBlue SMTP
+    - create an email template(emailTemplate.js)
+    - sendmail using '/send' request integrating emailService along emailTemplate
+
+15. Host project on heroku
+    - make a repo on github and push your code in repective repo
+    - create an app on heroku
+    - connect heroku with github 
+    - reconfigure variables in heroku
+    - deploy project/branch
+
+16. Setup Cors

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Preshak - file sharing service</title>
+        <link rel="stylesheet" href="/css/newstyle.css">
+        <link rel="icon" type="image/png" href="/img/send.png"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="body-container">
+            <div class="nav-container">
+                <a href="home.html"><img src="preshak_logo.png" alt="Logo_img"></a>
+            </div>
+            <div class="main-container">
+                <div class="main-link">
+                    <p>You can share the generated link</p>
+                    <div class="main-link-box">
+                        <div class=" input-container main-link-box-link">
+                            <input type="text" id="fileURL" readonly value="https://preshak.herokuapp.com/217427vs1212/">
+                            <img src="copy.png" alt="copy_icon" id="copyBtn">
+                        </div>
+                    </div>
+                </div>
+                <div class="main-form">
+                    <p>OR send via email</p>
+                    <div class="main-form-box">
+                        <form id="emailForm">
+                            <input type="email" placeholder="Your email address" required name="from-email" id="sender">
+                            <br/>
+                            <input type="email" placeholder="Receiver email address" required name="to-email" id="receiver">
+                            <br/>
+                            <button type="submit">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="banner">
+                <p>You with preshak can send files size up to 100MB Free*
+                <button>How preshak works?</button>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
