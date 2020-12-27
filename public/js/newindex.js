@@ -172,6 +172,7 @@ emailForm.addEventListener("submit", (e) => {
 
 let toastTimer;
 const showToast = (msg) => {
+    toast.display.style = "block";
     toast.innerText = msg;
     toast.style.transform = "translate(-5vw, -90vh)";
     clearTimeout(toastTimer);
