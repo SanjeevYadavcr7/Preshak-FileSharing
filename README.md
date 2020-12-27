@@ -2,8 +2,6 @@
 <p>Hey there <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px"><br/><br/>Preshak is a free cloud-based file transfer web application :computer:, the application acts as a platform to send and receive files in real-time and the files can be shared to users mail account as well:rocket:</p> You can visit <a href="https://preshak-filesharingapp.herokuapp.com/">Preshak here</a><br/><br/>
 <p align="center">
 <img src="https://github.com/SanjeevYadavcr7/Preshak-FileSharing/blob/main/UI-Preshak.png" width="700px" height="410px" align="center" style="border:1px solid" alt="Godam"></p>
-<h3>Project Features</h3>
-File Upload | Email Specification | Send files to gmail | Automatic notifications | Responsiveness
 
 ## <h3> Project Features </h3>
 - [x] Upload File <br/>
@@ -13,7 +11,7 @@ File Upload | Email Specification | Send files to gmail | Automatic notification
 - [x] Responsiveness <br/>
 <br/>
 <br/>
-### <h3> Technologies </h3>
+## <h3> Technologies </h3>
 - [x] NodeJS v12.18.3(for dev environment) <br/>
 - [x] MongoDB v3.6.3(for database stuff) <br/>
 - [x] Express v4.17.1(for handling HTTP requests) <br/>
