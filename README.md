@@ -14,9 +14,11 @@ File Upload | Email Specification | Send files to gmail | Automatic notification
 
 ## <h3>Project Snapshots</h3>
 <p align="center">
-<img src="https://github.com/SanjeevYadavcr7/Preshak-FileSharing/blob/main/moblie-preshak1.png" width="308px" height="547px" align="center" style="border:1px solid" alt="Godam"><img src="https://github.com/SanjeevYadavcr7/Preshak-FileSharing/blob/main/moblie-preshak2.png" width="308px" height="547px" align="center" style="border:1px solid" alt="Godam"></p>
-
-
+<img src="https://github.com/SanjeevYadavcr7/Preshak-FileSharing/blob/main/moblie-preshak1.png" width="308px" height="547px" align="center">
+</p>
+<p>
+<img src="https://github.com/SanjeevYadavcr7/Preshak-FileSharing/blob/main/moblie-preshak2.png" width="308px" height="547px" align="center"> 
+</p>
 
 ## <h3>Setup</h3>
 ```
