@@ -1,5 +1,5 @@
 <h1>Preshak | File Sharing WebApp</h1>
-<p>Hey there <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px"><br/><br/>Preshak is a free cloud-based file transfer web application :computer:, the application acts as a platform to send and receive files in real-time to receiver gmail account :rocket:</p> You can visit <a href="https://preshak.herokuapp.com/">Preshak here</a><br/><br/>
+<p>Hey there <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px"><br/><br/>Preshak is a free cloud-based file transfer web application :computer:, the application acts as a platform to send and receive files in real-time to receiver gmail account :rocket:</p> You can visit <a href="https://preshak-filesharingapp.herokuapp.com/">Preshak here</a><br/><br/>
 <p align="center">
 <img src="https://github.com/SanjeevYadavcr7/Preshak-FileSharing/blob/main/UI-Preshak.png" width="700px" height="410px" align="center" style="border:1px solid" alt="Godam"></p>
 <h3>Project Features</h3>
@@ -14,9 +14,15 @@ File Upload | Email Specification | Send files to gmail | Automatic notification
 
 ## <h3>Project Snapshots</h3>
 <p align="center">
-<img src="https://github.com/SanjeevYadavcr7/Preshak-FileSharing/blob/main/moblie-preshak1.png" width="308px" height="547px" hspace="40">
-<img src="https://github.com/SanjeevYadavcr7/Preshak-FileSharing/blob/main/moblie-preshak2.png" width="308px" height="547px" hspace="40"> 
+<img src="https://github.com/SanjeevYadavcr7/Preshak-FileSharing/blob/main/mobile-preshak3.png" width="308px" height="547px" hspace="40">
+<img src="https://github.com/SanjeevYadavcr7/Preshak-FileSharing/blob/main/mobile-preshak2.png" width="308px" height="547px" hspace="40"> 
 </p>
+<br/>
+<br/>
+<p align="center"><img src="https://github.com/SanjeevYadavcr7/Preshak-FileSharing/blob/main/desktop-preshak.png" width="800px" height="430px"></p>
+<br/>
+<br/>
+<p align="center"><img src="https://github.com/SanjeevYadavcr7/Preshak-FileSharing/blob/main/desktop-mail1.png" width="800px" height="430px"></p>
 
 ## <h3>Setup</h3>
 ```
