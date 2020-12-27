@@ -12,6 +12,12 @@ File Upload | Email Specification | Send files to gmail | Automatic notification
 - [x] Ejs v3.1.5(as template engine)<br/>
 - [x] Multer v1.4.2(for handling "multipart/form-data") <br/>
 
+## <h3>Project Snapshots</h3>
+<p align="center">
+<img src="https://github.com/SanjeevYadavcr7/Preshak-FileSharing/blob/main/moblie-preshak1.png" width="308px" height="547px" hspace="40">
+<img src="https://github.com/SanjeevYadavcr7/Preshak-FileSharing/blob/main/moblie-preshak2.png" width="308px" height="547px" hspace="40"> 
+</p>
+
 ## <h3>Setup</h3>
 ```
 $ yarn
