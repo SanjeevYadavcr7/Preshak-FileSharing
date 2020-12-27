@@ -17,7 +17,8 @@ File Upload | Email Specification | Send files to gmail | Automatic notification
 <img src="https://github.com/SanjeevYadavcr7/Preshak-FileSharing/blob/main/mobile-preshak3.png" width="308px" height="547px" hspace="40">
 <img src="https://github.com/SanjeevYadavcr7/Preshak-FileSharing/blob/main/mobile-preshak2.png" width="308px" height="547px" hspace="40"> 
 </p>
-<p></p>
+<br/>
+<br/>
 <p align="center">
 <img src="https://github.com/SanjeevYadavcr7/Preshak-FileSharing/blob/main/desktop-preshak.png" width="800px" height="430px"></p>
 
