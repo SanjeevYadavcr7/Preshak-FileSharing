@@ -19,8 +19,10 @@ File Upload | Email Specification | Send files to gmail | Automatic notification
 </p>
 <br/>
 <br/>
-<p align="center">
-<img src="https://github.com/SanjeevYadavcr7/Preshak-FileSharing/blob/main/desktop-preshak.png" width="800px" height="430px"></p>
+<p align="center"><img src="https://github.com/SanjeevYadavcr7/Preshak-FileSharing/blob/main/desktop-preshak.png" width="800px" height="430px"></p>
+<br/>
+<br/>
+<p align="center"><img src="https://github.com/SanjeevYadavcr7/Preshak-FileSharing/blob/main/desktop-mail1.png" width="800px" height="430px"></p>
 
 ## <h3>Setup</h3>
 ```
