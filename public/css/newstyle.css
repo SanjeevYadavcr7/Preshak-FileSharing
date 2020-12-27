@@ -382,7 +382,6 @@ button{cursor: pointer;}
     .body-container{
         width: 100%;
         border: none;
-        /* border-left: 4px solid #2a8dff; */
     }
     .nav-container{
         height:9vh;
@@ -397,7 +396,7 @@ button{cursor: pointer;}
         margin-left: 10px;
         margin-top: 3px;
     }
-    .main-container{width: 100%;border-radius: 0;}
+    .main-container{width: 100%;border-radius: 0;border:none;}
     .main-container p{font-size:2em;font-weight: 700;}
     .main-container .img1{width: 30%;margin:0% -45%;}
     .main-container .img2{width: 20%;margin:53% -38%;}
@@ -445,23 +444,12 @@ button{cursor: pointer;}
     .img-banner{margin:40% auto;width:90%;}
 
     /* to be included */
-    .main-container{
-        display: flex;flex-direction:column;
-        margin:0;padding: 0;
-    }
-    .main-link{width: 96%;margin:0;padding: 0;}
-    .main-link-box{width: 90%;height:25%;border-radius:5px;}
-    .main-form{width: 86%;margin:0;margin-top:7em;
-        padding: 0;border:1px solid #028bca;
-    padding-top:1em;margin:40% auto;}
-    .main-form p{display: none;}
-    #emailForm input{width:250px;}
-
+    
     /* link page  */
-    .sharing-container{width:100%;}
+    .sharing-container{width:100%;border:none;}
     .email-container{display: flex;align-items: center;
         flex-direction: column;justify-content: center;
-    padding-top:15%;width:100%;}
+    padding-top:15%;width:100%;border:none;}
     .main-link{margin:0;margin-bottom:5%;}
     .email-container .main-link p{font-size:0.9em;font-weight:400;}
     .main-link-box{width: 90%;height:60px;border-radius: 3px;}
