@@ -397,26 +397,36 @@ button{cursor: pointer;}
         margin-left: 10px;
         margin-top: 3px;
     }
-    .main-container{
-        width: 100%;
-        border-radius: 0;
-    }
+    .main-container{width: 100%;border-radius: 0;}
     .main-container p{font-size:2em;font-weight: 700;}
-
-    .suspension{animation:suspension 1.3s linear infinite;}
     .main-container .img1{width: 30%;margin:0% -45%;}
     .main-container .img2{width: 20%;margin:53% -38%;}
     .main-container .img3{width: 20%;margin:-2% 20%;}
     .main-container .img4{width: 40%;margin:57% 6%;}
-    .main-upload{width: 90%;height:70%;border-radius:20px;}
-    .main-upload-inner{width: 83%;height: 75%;}
-    .main-upload-inner-img{margin: 12% auto;}
-    .banner{width:90%;margin-top:50%;height: auto;
-        font-size: 0.65em;}
+    
+    .main-upload{width:90%;height:70%;border-radius:20px;}
+    .main-upload-inner{width:83%;height: 75%;}
+    .main-upload-inner-img{margin:12% auto;}
+    .main-upload .progress-container{
+        /* border:2px solid red; */
+        height:45px;
+        border-radius:5px;
+        padding: 0;
+    }
+    .main-upload .progress-container .inner-container{
+        width: 95%;
+        margin: 0;
+        margin-top: -0.5em;
+        margin-left: 0.4em ;
+    }
+    /* .percent-container{margin-bottom:0.2em;} */
+    /* .progress-bar{} */
+    .banner{width:90%;margin-top:50%;height: auto;font-size: 0.65em;}
     .banner button{display:none;}
     .banners{display: none;}
-
     .toast{display: none;}
+    .suspension{animation:suspension 1.3s linear infinite;}
+
 
     /* sharing container */
     .sharing-container{border:2px solid #fff;}
