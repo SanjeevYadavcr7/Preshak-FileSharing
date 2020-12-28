@@ -370,6 +370,14 @@ button{cursor: pointer;}
         }
         .img-banner img{width: 100%;}
 
+@media only screen and (min-width: 900px) and (max-width:1200px){
+    .main-upload{width:80%;height:65%;border-radius:20px;}
+    .banner{width:90%;margin-top:50%;
+        height: auto;font-size: 0.65em;
+    }
+
+}        
+
 @media only screen and (max-width: 430px){
     
     body{
@@ -419,7 +427,7 @@ button{cursor: pointer;}
     }
     /* .percent-container{margin-bottom:0.2em;} */
     /* .progress-bar{} */
-    .banner{width:90%;margin-top:50%;height: auto;font-size: 0.65em;}
+    .banner{width:90%;margin-top:50%;height:auto;font-size: 0.65em;}
     .banner button{display:none;}
     .banners{display: none;}
     .toast{display: none;}
