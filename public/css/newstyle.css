@@ -483,4 +483,5 @@ button{cursor: pointer;}
 
 @media only screen and (min-width: 1100px) and (max-width:1500px){
     .main-upload{width: 350px;height:65%;border-radius:20px;}
+    .main-upload-inner-img{margin:6% auto;}
 }        
