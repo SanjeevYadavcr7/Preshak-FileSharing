@@ -11,7 +11,8 @@
     <body>
         <div class="body-container">
             <div class="nav-container">
-                <img src="/img/preshak_logo.png" alt="Logo_img">
+                <img class="dark-logo" src="/img/preshak_logo.png" alt="Logo_img">
+                <a class="dark-a"><img class="dark-img" src="/img/bolt.png" alt="moon"></a>
             </div>
            
             <div class="main-container">
@@ -46,21 +47,21 @@
                 <div class="sharing-container">
                     <div class="email-container">
                         <div class="main-link">
-                            <p>You can share the generated link</p>
+                            <p class="main-link-p">You can share the generated link</p>
                             <div class="main-link-box">
                                 <div class=" input-container main-link-box-link">
                                     <input type="text" id="fileURL" readonly value="https://preshak.herokuapp.com/217427vs1212/">
-                                    <img src="/img/copy.png" alt="copy_icon" id="copyBtn">
+                                    <img src="/img/cb.svg" alt="copy_icon" id="copyBtn">
                                 </div>
                             </div>
                         </div>
                         <div class="main-form">
-                            <p>OR send via email</p>
+                            <p class="main-form-p">OR send via email</p>
                             <div class="main-form-box">
                                 <form id="emailForm">
-                                    <input type="email" placeholder="Your email address" required name="from-email" id="sender">
+                                    <input class="input-edit" type="email" placeholder="Your email address" required name="from-email" id="sender">
                                     <br/>
-                                    <input type="email" placeholder="Receiver email address" required name="to-email" id="receiver">
+                                    <input class="input-edit" type="email" placeholder="Receiver email address" required name="to-email" id="receiver">
                                     <br/>
                                     <button type="submit">Send</button>
                                 </form>
@@ -75,7 +76,7 @@
 
             <div class="banner">
                 <p>You with preshak can send files size up to 100MB Free*
-                <button>How preshak works?</button>
+                <button class="banner-btn">How preshak works?</button>
                 </p>
             </div>
         </div>
