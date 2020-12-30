@@ -28,7 +28,8 @@ const emailForm = document.querySelector("#emailForm");
 
 dropZone.addEventListener('dragover', (e) => {
     e.preventDefault();
-    if(mode === "light")
+    darkmode = localStorage.getItem("darkMode");
+    if(darkmode !== 'enabled')
     {
         if(!dropZone.classList.contains('dragged'))
             dropZone.classList.add('dragged');
@@ -45,7 +46,8 @@ dropZone.addEventListener('dragover', (e) => {
 });
 
 dropZone.addEventListener('dragleave', () => {
-    if(mode === "light")
+    darkmode = localStorage.getItem("darkMode");
+    if(darkmode !== 'enabled')
         dropZone.classList.remove('dragged');
     else
         dropZone.classList.remove('draggedDark');
@@ -55,8 +57,6 @@ dropZone.addEventListener('dragleave', () => {
 
 dropZone.addEventListener('drop', (e) => {
     e.preventDefault();
-    // dropZone.classList.remove('dragged');
-    // imgZone.classList.remove('suspensions');
     const files = e.dataTransfer.files;
     console.log("File length= "+files.length);
     if(files.length){
@@ -65,9 +65,7 @@ dropZone.addEventListener('drop', (e) => {
     }
 });
 
-fileInput.addEventListener("change", () => {
-    uploadFile();
-});
+fileInput.addEventListener("change", () => {uploadFile();});
 
 // adding file choosing option on clicking browse span 
 browseBtn.addEventListener('click', (e) => {
@@ -83,11 +81,11 @@ copyBtn.addEventListener("click",() => {
 
 
 const uploadFile = () => {
-    
     if(fileInput.files.length > 1){
         fileInput.value="";
         showToast("You can upload only one file !");
-        if(mode === "light")dropZone.classList.remove('dragged');
+        darkmode = localStorage.getItem("darkMode");
+        if(darkmode !== 'enabled')dropZone.classList.remove('dragged');
         else dropZone.classList.remove('draggedDark');
         imgZone.classList.remove('suspensions');
         return;
@@ -139,11 +137,8 @@ const updateProgress = (e) => {
 const showLink = ({file: url}) => {
     fileInput.value = "";
     emailForm[2].removeAttribute("disabled");
-    // progressContainer.style.display = "none";
-    // sharingContainer.style.display = "block";
     fileURL.value = url;
 }
-
 
 emailForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -156,9 +151,7 @@ emailForm.addEventListener("submit", (e) => {
     };
 
     // console.table(formData);
-
     emailForm[2].setAttribute("disabled", "true");
-
     fetch(emailURL, {
         method: "POST",
         headers: {
@@ -169,13 +162,6 @@ emailForm.addEventListener("submit", (e) => {
     .then(res => res.json())
     .then(({success}) => {
          if(success){
-            // sharingContainer.style.display = "none";
-            // dropZone.classList.remove('dragged');
-            // imgZone.classList.remove('suspensions');
-            // containerBlock.style.display = "block";
-            // progressContainer.style.display = "none";
-            // dropDiv.style.display = "block";
-            // fileInput.value = "";
             setTimeout(() => {
             window.location.href = 'https://preshak-filesharingapp.herokuapp.com/';
             },2700);
@@ -195,8 +181,9 @@ const showToast = (msg) => {
     }, 2000);
 };
 
+let darkmode = localStorage.getItem("darkMode");
 
-// for dark zone 
+// selecting classes for dark mode 
 const aDark = document.querySelector('.dark-a');
 const imgDark = document.querySelector('.dark-img');
 const logoDark = document.querySelector('.dark-logo');
@@ -226,12 +213,7 @@ const sender = document.querySelector('#sender');
 const receiver = document.querySelector('#receiver');
 const inputDark = document.querySelectorAll('.input-edit');
 
-aDark.addEventListener("click",() => {
-    if(mode === "light")mode = "dark";
-    else mode = "light";
-
-    if(mode === "dark")
-    {
+const enableDarkMode = () => {
     bodyDark.style.background = "#161625";
     mainDark.style.background = "linear-gradient(to bottom, #30303C, #202032)";
     mainDark.style.border = "1px solid #3A3A45";
@@ -281,170 +263,84 @@ aDark.addEventListener("click",() => {
     receiver.style.color = "#F24C4C";
     receiver.style.fontWeight = "400"; 
     receiver.style.letterSpacing = "0.1em";
+
+    localStorage.setItem('darkMode','enabled');
+}
+const disableDarkMode = () => {
+    bodyDark.style.background = "#FFF";
+    mainDark.style.background = "linear-gradient(to bottom, #2555FF, #2589FF)";
+    mainDark.style.border = "1px solid #666";
+    aDark.style.border = "2px solid #3A3A45";
+    imgDark.src = "/img/bolt.png";
+    logoDark.src = "/img/preshak_logo.png";
+    img1Dark.src = "/img/youtube_download.png";
+    img2Dark.src = "/img/cloud_download.png";
+    img3Dark.src = "/img/file_download.png";
+    img4Dark.src = "/img/select.png";
+    mainUploadDark.style.boxShadow = " 0 20px 20px -10px #abcff8";
+    mainUploadDark.style.background = "#FFF";
+    mainUploadDark.style.border = "1px solid #FFF";
+    bannerDark.style.background = "rgba(37,85,255,0.06)";
+    bannerDark.style.color = "#555";
+    bannerDark.style.border = "1px solid #50A1FF";
+    muiDark.style.border = "1px dashed #50A1FF";
+    browseBtnDark.style.color = "#50A1FF";
+    imgZoneDark.style.background = "#FFF";
+    progessCDark.style.background = "#FFF";
+    // progessBarDark.style.background = "#4C75F2";
+    progessCDark.style.border = "2px solid #edf5fe";
+    bgProgressDark.style.background = "#FFF";
+    bgProgressDark.style.boxShadow = "0 15px 21px -10px #abbdff";
+    toast.style.boxShadow = "0 15px 21px -10px #567bff";
+    toast.style.background = "#2E5CFF";
+    toast.style.border = "1px solid #2E5CFF";
+    bannerBtnDark.style.background = "#2555FF";
+    bannerBtnDark.style.border = "1px solid #2555FF";
+    mainLinkBoxDark.style.background = "#FFF";
+    mainLinkBoxDark.style.boxShadow = "0 20px 11px -10px rgba(0,0,0,0.5)";
+    pLinkDark.style.color = "#fff";
+    pFormDark.style.color = "#fff";
+    mainFormDark.style.background = "#fff";
+    mainFormDark.style.boxShadow = "0 20px 11px -10px rgba(0,0,0,0.5)";
+    // formDark.style.borderLeft = "1px solid #fff";
+    mLinkBoxLinkDark.style.border = "1px dashed #2589FF";
+    fileURL.style.background = "#fff";
+    fileURL.style.color = "#777";
+    sender.style.background = "#fff";
+    sender.style.border = "1px solid #2589FF";
+    receiver.style.background = "#fff";
+    receiver.style.border = "1px solid #2589FF";
+    sender.style.color = "#444";
+    sender.style.fontWeight = "400"; 
+    sender.style.letterSpacing = "0.1em";
+    receiver.style.color = "#444";
+    receiver.style.fontWeight = "400"; 
+    receiver.style.letterSpacing = "0.1em";
+    localStorage.setItem('darkMode',null);
+}
+
+if(darkmode === 'enabled'){
+    enableDarkMode();
+}
+
+aDark.addEventListener("click",() => {
+    darkmode = localStorage.getItem("darkMode");
+    if(darkmode !== "enabled"){
+        enableDarkMode();
     }
     else{
-        bodyDark.style.background = "#FFF";
-        mainDark.style.background = "linear-gradient(to bottom, #2555FF, #2589FF)";
-        mainDark.style.border = "1px solid #666";
-        aDark.style.border = "2px solid #3A3A45";
-        imgDark.src = "/img/bolt.png";
-        logoDark.src = "/img/preshak_logo.png";
-        img1Dark.src = "/img/youtube_download.png";
-        img2Dark.src = "/img/cloud_download.png";
-        img3Dark.src = "/img/file_download.png";
-        img4Dark.src = "/img/select.png";
-        mainUploadDark.style.boxShadow = " 0 20px 20px -10px #abcff8";
-        mainUploadDark.style.background = "#FFF";
-        mainUploadDark.style.border = "1px solid #FFF";
-        bannerDark.style.background = "rgba(37,85,255,0.06)";
-        bannerDark.style.color = "#555";
-        bannerDark.style.border = "1px solid #50A1FF";
-        muiDark.style.border = "1px dashed #50A1FF";
-        browseBtnDark.style.color = "#50A1FF";
-        imgZoneDark.style.background = "#FFF";
-        progessCDark.style.background = "#FFF";
-        // progessBarDark.style.background = "#4C75F2";
-        progessCDark.style.border = "2px solid #edf5fe";
-        bgProgressDark.style.background = "#FFF";
-        bgProgressDark.style.boxShadow = "0 15px 21px -10px #abbdff";
-        toast.style.boxShadow = "0 15px 21px -10px #567bff";
-        toast.style.background = "#2E5CFF";
-        toast.style.border = "1px solid #2E5CFF";
-        bannerBtnDark.style.background = "#2555FF";
-        bannerBtnDark.style.border = "1px solid #2555FF";
-        mainLinkBoxDark.style.background = "#FFF";
-        mainLinkBoxDark.style.boxShadow = "0 20px 11px -10px rgba(0,0,0,0.5)";
-        pLinkDark.style.color = "#fff";
-        pFormDark.style.color = "#fff";
-        mainFormDark.style.background = "#fff";
-        mainFormDark.style.boxShadow = "0 20px 11px -10px rgba(0,0,0,0.5)";
-        // formDark.style.borderLeft = "1px solid #fff";
-        mLinkBoxLinkDark.style.border = "1px dashed #2589FF";
-        fileURL.style.background = "#fff";
-        fileURL.style.color = "#777";
-        sender.style.background = "#fff";
-        sender.style.border = "1px solid #2589FF";
-        receiver.style.background = "#fff";
-        receiver.style.border = "1px solid #2589FF";
-        sender.style.color = "#444";
-        sender.style.fontWeight = "400"; 
-        sender.style.letterSpacing = "0.1em";
-        receiver.style.color = "#444";
-        receiver.style.fontWeight = "400"; 
-        receiver.style.letterSpacing = "0.1em";
+        disableDarkMode();
     }
-    
 })
 
 
-
 logoDark.addEventListener("click",() => {
-    if(mode === "light")mode = "dark";
-    else mode = "light";
-
-    if(mode === "dark")
-    {
-    bodyDark.style.background = "#161625";
-    mainDark.style.background = "linear-gradient(to bottom, #30303C, #202032)";
-    mainDark.style.border = "1px solid #3A3A45";
-    aDark.style.border = "2px solid #3A3A45";
-    imgDark.src = "/img/light.png";
-    logoDark.src = "/img/logo.png";
-    img1Dark.src = "/img/youtube_download2.png";
-    img2Dark.src = "/img/cloud_download2.png";
-    img3Dark.src = "/img/file_download2.png";
-    img4Dark.src = "/img/select2.png";
-    mainUploadDark.style.boxShadow = "0px 20px 20px -10px rgba(0,0,0,0.4)";
-    mainUploadDark.style.background = "#1E1E30";
-    mainUploadDark.style.border = "1px solid transparent";
-    bannerDark.style.background = "#202032";
-    bannerDark.style.color = "#FFF";
-    bannerDark.style.border = "1px solid #3C3C4B";
-    muiDark.style.border = "1px dashed #9898D0";
-    browseBtnDark.style.color = "#50A1FF";
-    imgZoneDark.style.background = "rgba(80,213,255,0.09)";
-    progessCDark.style.background = "#1E1E30";
-    // progessBarDark.style.background = "#4C75F2";
-    progessCDark.style.border = "2px solid #3C3C4B";
-    bgProgressDark.style.background = "#1E1E30";
-    bgProgressDark.style.boxShadow = "0 15px 21px -10px rgba(0,0,0,0.4)";
-    toast.style.boxShadow = "0 7px 21px -12px #4C75F2";
-    toast.style.background = "#4C75F2";
-    toast.style.border = "1px solid #4C75F2";
-    bannerBtnDark.style.background = "#4C75F2";
-    bannerBtnDark.style.border = "1px solid #4C75F2";
-    mainLinkBoxDark.style.background = "#1E1E30";
-    mainLinkBoxDark.style.boxShadow = "0 20px 11px -10px #161625";
-    pLinkDark.style.color = "#777";
-    pFormDark.style.color = "#777";
-    mainFormDark.style.background = "#1E1E30";
-    mainFormDark.style.boxShadow = "0 20px 11px -10px #161625";
-    // formDark.style.borderLeft = "1px solid #555";
-    mLinkBoxLinkDark.style.border = "1px dashed #555";
-    fileURL.style.background = "transparent";
-    fileURL.style.color = "#777";
-    sender.style.background = "#202032";
-    sender.style.border = "1px solid #555";
-    receiver.style.background = "#202032";
-    receiver.style.border = "1px solid #555";
-    sender.style.color = "#3BADFF";
-    sender.style.fontWeight = "400"; 
-    sender.style.letterSpacing = "0.1em";
-    receiver.style.color = "#F24C4C";
-    receiver.style.fontWeight = "400"; 
-    receiver.style.letterSpacing = "0.1em";
+    darkmode = localStorage.getItem("darkMode");
+    if(darkmode !== "enabled"){
+        enableDarkMode();
     }
     else{
-        bodyDark.style.background = "#FFF";
-        mainDark.style.background = "linear-gradient(to bottom, #2555FF, #2589FF)";
-        mainDark.style.border = "1px solid #666";
-        aDark.style.border = "2px solid #3A3A45";
-        imgDark.src = "/img/bolt.png";
-        logoDark.src = "/img/preshak_logo.png";
-        img1Dark.src = "/img/youtube_download.png";
-        img2Dark.src = "/img/cloud_download.png";
-        img3Dark.src = "/img/file_download.png";
-        img4Dark.src = "/img/select.png";
-        mainUploadDark.style.boxShadow = " 0 20px 20px -10px #abcff8";
-        mainUploadDark.style.background = "#FFF";
-        mainUploadDark.style.border = "1px solid #FFF";
-        bannerDark.style.background = "rgba(37,85,255,0.06)";
-        bannerDark.style.color = "#555";
-        bannerDark.style.border = "1px solid #50A1FF";
-        muiDark.style.border = "1px dashed #50A1FF";
-        browseBtnDark.style.color = "#50A1FF";
-        imgZoneDark.style.background = "#FFF";
-        progessCDark.style.background = "#FFF";
-        // progessBarDark.style.background = "#4C75F2";
-        progessCDark.style.border = "2px solid #edf5fe";
-        bgProgressDark.style.background = "#FFF";
-        bgProgressDark.style.boxShadow = "0 15px 21px -10px #abbdff";
-        toast.style.boxShadow = "0 15px 21px -10px #567bff";
-        toast.style.background = "#2E5CFF";
-        toast.style.border = "1px solid #2E5CFF";
-        bannerBtnDark.style.background = "#2555FF";
-        bannerBtnDark.style.border = "1px solid #2555FF";
-        mainLinkBoxDark.style.background = "#FFF";
-        mainLinkBoxDark.style.boxShadow = "0 20px 11px -10px rgba(0,0,0,0.5)";
-        pLinkDark.style.color = "#fff";
-        pFormDark.style.color = "#fff";
-        mainFormDark.style.background = "#fff";
-        mainFormDark.style.boxShadow = "0 20px 11px -10px rgba(0,0,0,0.5)";
-        // formDark.style.borderLeft = "1px solid #fff";
-        mLinkBoxLinkDark.style.border = "1px dashed #2589FF";
-        fileURL.style.background = "#fff";
-        fileURL.style.color = "#777";
-        sender.style.background = "#fff";
-        sender.style.border = "1px solid #2589FF";
-        receiver.style.background = "#fff";
-        receiver.style.border = "1px solid #2589FF";
-        sender.style.color = "#444";
-        sender.style.fontWeight = "400"; 
-        sender.style.letterSpacing = "0.1em";
-        receiver.style.color = "#444";
-        receiver.style.fontWeight = "400"; 
-        receiver.style.letterSpacing = "0.1em";
-    }
-    
+        disableDarkMode();
+    }   
 })
 
