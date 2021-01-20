@@ -24,6 +24,7 @@ app.set('view engine', 'ejs');
 
 // Routes  
 app.use('',require('./routes/home'))
+app.use('/howWorks',require('./routes/howWorks'))
 app.use('/api/files',require('./routes/files'))
 app.use('/files', require('./routes/show'))
 app.use('/files/download', require('./routes/download'));
