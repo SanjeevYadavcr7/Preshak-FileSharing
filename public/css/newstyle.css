@@ -431,12 +431,14 @@ button{cursor: pointer;}
 }
 .hiw-right-img img{width: 100%;}
 .active{
+    border:none;
    background:linear-gradient(to bottom, #2555FF, #2589FF);
 }
 .active .hiw-head, .active .hiw-desc{color: #fff;}
 .tab-content-item{display: none;}
 .show{display: block;}
-.setting{display: none;}
+.setting-a, .setting{display: none;}
+
 /* how it works ends  */
 
 
@@ -582,7 +584,12 @@ button{cursor: pointer;}
         border:none;
     }
     .banner a span{display: none;}
-    .setting{display: inline-block;width:35%;}
+    /* .setting{display: inline-block;width:35%;} */
+    .setting-a, .setting{display: block;}
+    .setting-a{border:1px solid transparent;display: block;}
+    .setting{border:2px solid rgb(197, 197, 197);width:6%;margin-top:-13%;float: right;margin-right:3%;
+    padding: 0.4em;border-radius:5px;}
+
     /* .small-text{display: none;} */
 }
 
