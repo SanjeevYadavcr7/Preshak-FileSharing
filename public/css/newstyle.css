@@ -539,11 +539,13 @@ button{cursor: pointer;}
     .main-form-box button{margin-bottom:20px;}
 
     /* How it works page  */
-    .hiw-main{flex-direction: column-reverse;margin:0;padding: 0;}
+    .hiw-main{flex-direction: column-reverse;margin:0;padding: 0;
+        border: 1px solid transparent;justify-content: center;
+    }
     .hiw-main .hiw-left{border:1px solid transparent;
-    margin: 0;padding: 0;width: 20%;margin-top: 10%;
-    flex-direction: column;
-    justify-content: space-around;}
+    margin: 0;padding: 0;width: 20%;margin-top: 3%;
+    margin-left: 5%;
+    flex-direction: column;}
     .hiw-left .hiw-left-box{width:50%;margin:0;
         text-align: center;
         box-shadow: 0 10px 15px -10px #c0ddff;
@@ -555,7 +557,7 @@ button{cursor: pointer;}
     .hiw-left .hiw-left-box .hiw-head{display: none;}
     .title{margin-top:7%;margin-bottom:5%;} 
     .hiw-main .hiw-right{border:1px solid transparent;width: 100%;
-        margin-left: 10%;
+        margin-left: 14%;
         margin-top:-103%;}
     .hiw-main .hiw-right{display: flex;justify-content: center;}
     .hiw-right .hiw-right-img{
