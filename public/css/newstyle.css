@@ -438,7 +438,7 @@ button{cursor: pointer;}
 .tab-content-item{display: none;}
 .show{display: block;}
 .setting-a, .setting{display: none;}
-
+.main-upload-inner-img{cursor: pointer;}
 /* how it works ends  */
 
 
@@ -587,7 +587,7 @@ button{cursor: pointer;}
     /* .setting{display: inline-block;width:35%;} */
     .setting-a, .setting{display: block;}
     .setting-a{border:1px solid transparent;display: block;}
-    .setting{border:2px solid transparent;width:6%;margin-top:-13%;float: right;margin-right:3%;
+    .setting{border:2px solid transparent;width:6%;margin-top:-12.5%;float: right;margin-right:3%;
     padding: 0.4em;border-radius:5px;}
 
     /* .small-text{display: none;} */

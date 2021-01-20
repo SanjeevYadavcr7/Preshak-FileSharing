@@ -10,6 +10,7 @@ const fileInput = document.querySelector('#fileInput');
 const dropZone = document.querySelector('.drop-zone');
 const imgZone = document.querySelector('.main-upload-inner-img-inner');
 const containerBlock = document.querySelector('.container-block');
+const takeInput = document.querySelector('.main-upload-inner-img');
 // for notification
 const toast = document.querySelector('.toast');  
 
@@ -69,6 +70,10 @@ fileInput.addEventListener("change", () => {uploadFile();});
 
 // adding file choosing option on clicking browse span 
 browseBtn.addEventListener('click', (e) => {
+    fileInput.click();
+});
+
+takeInput.addEventListener('click', (e) => {
     fileInput.click();
 });
 
