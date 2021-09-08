@@ -1,7 +1,7 @@
 <h1>Preshak | File Sharing WebApp</h1>
 <p>Hey there <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px"><br/><br/>Preshak is a free cloud-based file transfer web application :computer:, the application acts as a platform to send and receive files in real-time and the files can be shared to users mail account as well:rocket:</p> You can visit <a href="https://preshak-filesharingapp.herokuapp.com/">Preshak here</a><br/><br/>
 <p align="center">
-<img src="https://github.com/SanjeevYadavcr7/Preshak-FileSharing/blob/main/UI-Preshak.png" width="600px" height="300px" hspace="40">
+<img src="https://github.com/SanjeevYadavcr7/Preshak-FileSharing/blob/main/UI-Preshak.png" width="600px" height="350px" hspace="40">
 
 ## <h3> Project Features </h3>
 - [x] Upload File <br/>
